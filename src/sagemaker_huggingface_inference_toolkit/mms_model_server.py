@@ -44,7 +44,7 @@ logger = logging.get_logger()
 
 DEFAULT_HANDLER_SERVICE = handler_service.__name__
 
-DEFAULT_MMS_MODEL_DIRECTORY = os.path.join(os.getcwd(), ".sagemaker/mms/models")
+DEFAULT_MMS_MODEL_DIRECTORY = os.path.join("/tmp", ".sagemaker/mms/models") # per AWS - change to avoid storage issues
 MODEL_STORE = "/" if ENABLE_MULTI_MODEL else DEFAULT_MMS_MODEL_DIRECTORY
 
 
